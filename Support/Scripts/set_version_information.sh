@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git=$(sh /etc/profile; which git)
+git=$(/usr/bin/env git)
 number_of_commits=$("$git" rev-list HEAD --count)
 git_release_version=$("$git" describe --tags --always --abbrev=0)
 
